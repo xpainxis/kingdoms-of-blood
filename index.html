@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Kingdoms of Blood</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0f;
+      color: #eaeaea;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(10,10,15,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #300000;
+      z-index: 1000;
+    }
+
+    header h1 {
+      text-align: center;
+      padding: 15px;
+      color: #ff2e2e;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #aaa;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff2e2e;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #1a0000, #000);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      color: #ff2e2e;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-top: 15px;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ff2e2e;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #121218;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #300000;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ff2e2e;
+      box-shadow: 0 0 15px rgba(255,0,0,0.2);
+    }
+
+    .card strong {
+      color: #ff2e2e;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #300000;
+      transition: 0.3s;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+    }
+
+    .download {
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 24px;
+      background: linear-gradient(45deg, #500000, #900000);
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ff2e2e, #700000);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f0f14;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kingdoms of Blood</h1>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#mecanicas">Mecânicas</a>
+    <a href="#faccoes">Facções</a>
+    <a href="#cartas">Decks</a>
+    <a href="#lore">Lore</a> <!-- NOVO -->
+    <a href="#downloads">Downloads</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>O sangue define o destino</h2>
+  <p>
+    Construa seu deck, domine o fluxo de sangue e destrua seus inimigos em um mundo onde estratégia e sacrifício caminham lado a lado.
+  </p>
+</div>
+
+<section id="sobre">
+  <h2>Sobre o Jogo</h2>
+  <div class="grid">
+    <div class="card">
+      Um TCG estratégico medieval focado em controle de recursos e decisões táticas profundas.
+    </div>
+    <div class="card">
+      Cada partida é um confronto entre casas rivais em busca de poder absoluto.
+    </div>
+  </div>
+</section>
+
+<section id="mecanicas">
+  <h2>Mecânicas Principais</h2>
+  <div class="grid">
+    <div class="card"><strong>Sangue</strong><br>Recurso essencial.</div>
+    <div class="card"><strong>Tropas</strong><br>Unidades ofensivas.</div>
+    <div class="card"><strong>Fortalezas</strong><br>Estruturas únicas.</div>
+    <div class="card"><strong>Tipos de Sangue</strong><br>Carmesim e Corrompido.</div>
+  </div>
+</section>
+
+<section id="faccoes">
+  <h2>Facções</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Casa Nocthar</strong><br>
+      Manipulam o sangue corrompido.
+    </div>
+  </div>
+</section>
+
+<section id="cartas">
+  <h2>Decks Da Casa Nocthar</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/card1.png">
+      <p>Trono Profano de Nocthar</p>
+    </div>
+    <div class="card">
+      <img src="img/card2.png">
+      <p>Lorde Nocthar</p>
+    </div>
+    <div class="card">
+      <img src="img/card3.png">
+      <p>Abominação de Sangue Antigo</p>
+    </div>
+  </div>
+</section>
+
+<!-- LORE -->
+<section id="lore">
+  <h2>Lore do Mundo</h2>
+
+  <!-- NOVO: LORE GERAL -->
+  <div class="card">
+    <h3>Lore Geral</h3>
+    <p>Antes do tempo… antes da morte… antes mesmo da existência da vida… havia apenas o Vazio Primordial — um silêncio absoluto, infinito e sem forma. Mas até o vazio, em sua eternidade, começou a pulsar. Dessa pulsação nasceram os Primeiros Fluxos, entidades cósmicas além da compreensão, forças vivas que não apenas habitavam a realidade, mas a moldavam. Cada Fluxo representava um princípio fundamental — criação, destruição, ordem, caos — e entre eles surgiu algo diferente, algo que não apenas regia… mas sentia.
+
+Hem’Kalor, o Coração Rubro.
+
+Ele não era apenas uma força. Era vida em sua forma mais pura e perigosa. Dentro dele fluía o Sangue — não como substância, mas como essência absoluta da existência. O Sangue carregava memória, vontade, poder… e corrupção. Onde Hem’Kalor pulsava, formas surgiam. Onde seu poder tocava, a matéria se transformava. Ele foi o primeiro a gerar algo semelhante à vida — imperfeita, instável, mas viva. E foi exatamente isso que despertou o medo nos outros Fluxos, pois o Sangue não apenas criava… ele consumia, alterava e corrompia tudo ao seu redor.
+
+Temendo aquilo que não podiam controlar, os Fluxos se voltaram contra Hem’Kalor. A guerra que se seguiu não foi apenas um conflito — foi um colapso da própria realidade nascente. Forças além da compreensão se chocaram, rasgando o tecido do vazio. E no auge dessa guerra, Hem’Kalor foi traído, destruído e despedaçado. Mas sua morte não foi o fim. Foi o começo de tudo.
+
+Seus fragmentos, ainda pulsantes, caíram através da existência e colidiram com um mundo recém-formado, sem nome, sem propósito. No impacto, esse mundo foi transformado para sempre. Oceanos se tornaram mares escarlates, vastos e inquietos, como se ainda respirassem. A terra foi marcada por veias de sangue cristalizado que percorriam o solo como um organismo vivo. O céu assumiu tons de vermelho profundo, como uma ferida aberta no firmamento. E da união entre matéria e sangue, surgiram criaturas — algumas moldadas pela energia vital, outras deformadas pela corrupção.
+
+Assim nasceu Varn’Thalos, a Terra que Sangra.
+
+Mas a transformação não parou nas paisagens. O Sangue carregava fragmentos da consciência de Hem’Kalor, ecos de sua vontade espalhados pelo mundo. Com o passar das eras, dessas terras alteradas surgiram os primeiros povos — não criados diretamente, mas formados pela influência constante do Sangue. Em regiões onde ele fluía puro e abundante, nasceram os Hemaritas, seres que aprenderam a manipular essa força como magia. Eles ergueram templos, criaram rituais e desenvolveram impérios baseados no sacrifício e na adoração ao Coração Rubro, acreditando que Hem’Kalor não estava morto, apenas fragmentado, esperando para renascer.
+
+Nas terras mais corrompidas, onde o Sangue se misturava à decadência, surgiram os Dravkar — criaturas moldadas pela brutalidade e pela fome. Para eles, o Sangue não era algo a ser compreendido, mas consumido. Sua sociedade se baseava na força, na sobrevivência e na absorção do poder alheio, vivendo em constante conflito e evolução violenta. Já nas regiões onde a influência foi mais fraca, nasceram os Velkaris, um povo que temia o Sangue e buscava resistir à sua corrupção. Eles construíram cidades isoladas, preservaram conhecimento e passaram a estudar formas de conter ou até eliminar essa força, acreditando que Varn’Thalos era um erro deixado pela guerra dos Fluxos.
+
+Com o tempo, essas civilizações cresceram, se expandiram e inevitavelmente entraram em conflito. Guerras foram travadas não apenas por território, mas pelo controle do próprio Sangue. Impérios surgiram e caíram, rituais proibidos foram realizados, e o mundo continuou a sangrar.
+
+Pois o Sangue nunca foi apenas poder.
+
+Ele é vontade fragmentada.
+É memória viva.
+É o eco de um deus destruído.
+
+E em algum lugar, nas profundezas de Varn’Thalos, onde as veias do mundo pulsam mais fortes… os fragmentos de Hem’Kalor ainda batem.
+
+Esperando… o momento de serem reunidos novamente.
+<p>
+
+
+       <!-- CASAS -->
+  <div class="grid">
+    <div class="card">
+      <h3>Casa Nocthar</h3>
+      <p>Senhores do sangue corrompido...</p>
+      <a href="#lore-nocthar" class="btn">Ver História</a>
+    </div>
+  </div>
+</section>
+
+<section id="lore-nocthar">
+  <h2>Casa Nocthar</h2>
+  <div class="card">
+    <p>
+     Nas eras esquecidas, quando os reinos ainda temiam a própria noite, a Casa Nocthar não buscou luz — ela a rejeitou.
+
+Diz-se que seus fundadores foram antigos sacerdotes banidos, homens que ousaram estudar aquilo que nenhum rei permitia: a morte, a alma e o que existia além. 
+
+Exilados nas terras frias e silenciosas, eles encontraram poder não nos deuses… mas no fim de todas as coisas.
+
+Ali, ergueram o Trono Profano, um símbolo de domínio sobre a vida e a morte.
+
+Ao longo dos anos, Nocthar deixou de ser apenas uma casa — tornou-se um culto. Seus exércitos não temem a morte, pois a morte é apenas mais um recurso. Seus inimigos não enfrentam soldados… enfrentam aquilo que se recusa a permanecer morto.
+
+Onde outras casas lutam por honra, ouro ou glória…
+
+A Casa Nocthar luta pela eternidade.
+    </p>
+
+    <p>
+      Sacrifícios alimentam seu poder, e cada batalha fortalece sua corrupção.
+      Onde a Nocthar pisa, a vida se torna apenas combustível para a ascensão.
+    </p>
+  </div>
+</section>
+
+<section id="downloads" class="download">
+  <h2>Downloads</h2>
+  <a class="btn" href="downloads/Kingdoms_of_Blood_Manual_Beta_v0.3.pdf" download>📜 Regras Gerais</a>
+  <a class="btn" href="downloads/palavras_chaves_TCG.pdf" download>🩸 Palavras-Chave</a>
+</section>
+
+<footer>
+  © 2026 Kingdoms of Blood
+</footer>
+
+</body>
+</html>
